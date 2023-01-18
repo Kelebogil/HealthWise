@@ -1,0 +1,47 @@
+<ion-content >
+  <ion-card >
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <form (ngsubmit)="loginAdmin()" >
+    <ion-card-header  >
+      <ion-card-title class="ion-text-center" color="primary">Admin Login</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content >
+      <ion-item>
+        <ion-label ><ion-icon name="mail-outline" size="medium" ></ion-icon></ion-label>
+        <ion-input [(ngModel)]="admin.doctor_reg_no" placeholder="Enter your MBChB  Number" type="number" name="MBChB" required></ion-input>
+      </ion-item>
+    </ion-card-content >
+    <ion-card-content>
+      <ion-item>
+        <ion-label ><ion-icon name="lock-closed-outline" ></ion-icon></ion-label>
+
+          <ion-input [(ngModel)]="admin.password" name="password" [type]="showPwd ? 'text' : 'password'" placeholder="Enter password"required autocomplete="off" ></ion-input>
+
+
+    <ion-icon
+      slot="end"
+      [name]="pwdIcon"
+      (click)="togglePwd()"
+        size="small"
+
+    ></ion-icon>
+
+      </ion-item>
+    </ion-card-content>
+  <ion-card-content>
+    <ion-button (click)="loginAdmin()" shape="block">Login</ion-button>
+  </ion-card-content>
+  <ion-card-content>
+    <a href="forgot-password" style="font-size: 14px;" >Forgot password?</a>
+    <a href="registration" style="font-size: 14px; margin-left: 1.5rem;">Register</a>
+  </ion-card-content>
+  </form>
+  </ion-card>
+
+
+  </ion-content>

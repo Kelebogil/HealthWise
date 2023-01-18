@@ -1,0 +1,52 @@
+<ion-content [fullscreen]="true">
+  <form [formGroup]="updatingform" (ngSubmit)="updateUser()">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Health Wise</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+
+  <div class="">
+    <ion-card>
+      <ion-card-header>
+        <ion-title style="margin-left: 3%;">UPDATE PROFILE</ion-title>
+
+        <ion-card-title color="primary"></ion-card-title>
+        <ion-icon class="icon1" color="primary" name="person-sharp" style="align-items: center;"></ion-icon>
+
+      </ion-card-header>
+
+      <ion-card-content>
+        <div >
+
+
+          <div>
+
+            <ion-input formControlName="first_name" class="borde" placeholder="first name" > </ion-input>
+            <ion-label class="up" [(ngModel)]="updateInfor.first_name" position="stacked" color="danger" *ngIf="updatingform.get('first_name').hasError('required') && updatingform.get('first_name').touched">
+              name is required
+           </ion-label>
+          </div>
+
+
+          <ion-input class="borde" formControlName="last_name"  placeholder="last name" ></ion-input>
+          <ion-label color="danger" [(ngModel)]="updateInfor.last_name" *ngIf="updatingform.get('last_name').hasError('required')&& updatingform.get('last_name').touched">
+            last name is required
+          </ion-label>
+
+          <ion-input class="borde"  [(ngModel)]="updateInfor.email"  formControlName="email_address"  placeholder="please confirm your email" ></ion-input>
+
+        </div>
+        <ion-button class="btn" [disabled]="updatingform.invalid" size="full" (click)="updateUser()"> save new changies</ion-button>
+
+      </ion-card-content>
+    </ion-card>
+
+
+  </div>
+
+
+  </form>
+
+</ion-content>

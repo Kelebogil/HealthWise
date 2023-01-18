@@ -1,0 +1,15 @@
+<ion-content>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="admin-profile"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Clients</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ul class="users" *ngFor="let user of this.users; index as i "  (click)="onSelected(user)">
+  <li class="name">{{user.first_name}}
+  </li>
+</ul>
+
+</ion-content>

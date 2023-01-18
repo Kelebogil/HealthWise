@@ -1,0 +1,57 @@
+
+  <ion-header color="primary">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button menu="admin-menu" id="admin"></ion-menu-button>
+      </ion-buttons>
+      <ion-title >
+        Health Wise
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+<ion-card>
+  <ion-card-header >
+
+    <ion-card-title class="text-center" >Admin Profile</ion-card-title>
+  </ion-card-header>
+  <ion-card-content *ngFor="let admin  of this.admin">
+    <ion-item lines="full">
+      <ion-icon class="admin_icon" name="person-outline" size="large" style="margin-left: 40%; "></ion-icon>
+    </ion-item>
+    <ion-item lines="none">
+
+      <ion-label slot="start">Name:</ion-label>
+      <ion-input style="margin-left: 1rem">{{admin.first_name}}</ion-input>
+    </ion-item>
+
+     <ion-item lines="none">
+
+      <ion-label slot="start">Last Name:</ion-label>
+      <ion-input style="margin-left: 1rem">{{admin.last_name}}</ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label slot="start">Email:</ion-label>
+      <ion-input style="margin-left: .2rem;">{{admin.email_address}}</ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+
+      <ion-label slot="start">Address:</ion-label>
+
+      <ion-input  style="margin-left: 1rem; margin-top: 3rem;">{{admin.address}}</ion-input>
+    </ion-item>
+
+    <!-- <ion-item>
+      <ion-button [routerLink]="['/registrationa']" expand="block" color="primary">Add Client</ion-button>
+      <ion-button [routerLink]="['/list-users']" expand="block" color="primary">View Clients</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-button [routerLink]="['/appointment']" expand="block" color="primary">Add Bookings</ion-button>
+      <ion-button [routerLink]="['/appointments']" expand="block" color="primary">Bookings</ion-button>
+    </ion-item> -->
+  </ion-card-content>
+  </ion-card>
+  </ion-content>
+

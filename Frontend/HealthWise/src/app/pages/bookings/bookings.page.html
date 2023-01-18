@@ -1,0 +1,80 @@
+
+
+
+  <ion-content [fullscreen]="true">
+    <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="admin-profile"></ion-back-button>
+    </ion-buttons>
+    </ion-toolbar>
+     <ion-card>
+      <ion-card-header class="names">
+      <ion-text color="primary">
+        <h4>
+         APPOINTMENT
+        </h4>
+      </ion-text>
+        </ion-card-header>
+
+
+      <ion-card-content class="form">
+        <form [formGroup]="bookingform"  (ngSubmit)="saveNewUser()">
+
+            <ion-item>
+              <ion-label class="pos"> </ion-label>
+              <ion-icon position-static  size = "large" name="person-outline"></ion-icon>
+
+              <ion-input position="stacked"  type="text" placeholder="fullnames" [(ngModel)]="user.client_full_names" formControlName="names"></ion-input>
+          </ion-item>
+          <ion-label  position="stacked" color="danger" *ngIf="bookingform.get('names').hasError('required') && bookingform.get('names').touched" ion-icon.position="stacked">
+            name is required
+         </ion-label>
+
+
+
+        <ion-item>
+
+            <ion-label position="stacked" > <ion-icon  size="large"name="call-outline"></ion-icon></ion-label>
+             <ion-input type="number" placeholder="phone number" [(ngModel)]="user.client_phone_no" formControlName="number"></ion-input>
+
+
+                    <ion-label position="stacked" color="danger" *ngIf="bookingform.get('number').hasError('minlength') &&
+                    bookingform.get('number').touched ">
+                       number should atleast have 10 digits
+              </ion-label>
+            </ion-item>
+
+            <ion-label style="margin-left: 8%;" position="stacked" color="danger" *ngIf="bookingform.get('number').hasError('required') && bookingform.get('number').touched">
+                number is required
+             </ion-label>
+
+        <ion-item>
+          <ion-label position="floating"> <ion-icon size="large" name="text-outline"></ion-icon></ion-label>
+          <ion-input type="text" placeholder="problem discription" [(ngModel)]="user.description" formControlName="problem">{{ cuurentAppointmment.booking_time }}</ion-input>
+
+        </ion-item>
+
+            <ion-label style="margin-left: 8%;" position="stacked" color="danger" *ngIf="bookingform.get('problem').hasError('required') && bookingform.get('problem').touched ">
+
+          </ion-label>
+
+          <ion-item>
+            <ion-label position="floating"> <ion-icon size="large"name="calendar-outline"></ion-icon></ion-label>
+           <ion-input [min]="date" id="dates" placeholder="Date" [(ngModel)]="user.appointment_date"  formControlName="dates" >{{ cuurentAppointmment.booking_date }}</ion-input>
+        </ion-item>
+               <ion-label style="margin-left: 8%;" position="stacked" color="danger" *ngIf="bookingform.get('dates').hasError('required')&& bookingform.get('dates').touched ">
+
+                  </ion-label>
+
+        <ion-button type="submit" color="primary" class="btn" [disabled]="bookingform.invalid"  size="full" >book</ion-button>
+      </form>
+      </ion-card-content>
+    </ion-card>
+
+
+
+
+ </ion-content>
+
+
+

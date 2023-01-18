@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Appointments
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-margin">
+  <ion-grid class="ion-margin">
+    <ion-row>
+      <ion-col>Client Full Names</ion-col>
+      <ion-col>Appointment date</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let appo of appointment; index as i "
+    [class.active]="i == curentIndex"
+    class="hover"
+    (click)="onSelected(appo)">
+
+      <ion-col >{{ appo.client_full_names}}</ion-col>
+      <ion-col>{{ appo.appointment_date}}</ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

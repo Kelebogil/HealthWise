@@ -1,0 +1,59 @@
+<ion-content >
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu" id="main"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <strong>Health Wise</strong>
+    </ion-title>
+  </ion-toolbar>
+  <ion-router-outlet ></ion-router-outlet>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <img src="../../assets/images/1692DCDC-7AFE-428C-8B9B-AEE03E463B36_1_105_c.jpeg" class="home">
+  </ion-content>
+</ion-content>
+<ion-item class="auth-form">
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button [routerLink]="['/registration']" expand="block" color="primary">Register</ion-button>
+        <ion-button routerLink="['/login']" expand="block" color="danger">Sign In</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+<ion-item>
+<ion-button href="appointments" >View appointments</ion-button>
+<ion-button href="bookings">bookings</ion-button>
+<!-- <ion-button href="user-profile">userprofile</ion-button> -->
+
+</ion-item>
+
+<ion-button href="login">Route</ion-button>
+
+
+
+  <ion-img src="../../assets/images/1692DCDC-7AFE-428C-8B9B-AEE03E463B36_1_105_c.jpeg" expand="block" class="home"> </ion-img>
+
+
+
+
+</ion-content>
+
+<ion-content>
+
+<!-- <ion-button href="admin-dashboard">admin dashboard</ion-button> -->
+
+<div class="welcome">
+<p>We can help you find a doctor!</p>
+<p>Where to start?</p>
+  <ion-button href="login">Login</ion-button>
+  <ion-button href="registration">Register</ion-button>
+</div>
+
+</ion-content>

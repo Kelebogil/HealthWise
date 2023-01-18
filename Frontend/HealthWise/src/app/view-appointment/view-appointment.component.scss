@@ -1,0 +1,23 @@
+table {
+    margin-top: 2.5rem;
+    border-collapse: collapse;
+}
+
+th{
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 1px solid #000;
+}
+
+td{
+    border-bottom: 1px solid #ddd;
+}
+
+td, th{
+    padding: 8px;
+}
+
+table{
+    width: 100%;
+}

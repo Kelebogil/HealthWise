@@ -1,0 +1,40 @@
+<ion-header color="primary">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+   <ion-title class="text-center">Profile</ion-title>
+   <ion-buttons slot="primary" size="small">
+    <ion-button color="danger" fill="outline" href="registration">
+      Edit
+      <ion-icon slot="end" name="create" size="small"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+  <ion-item lines="full">
+
+    <ion-icon name="person" color="primary" style="margin-left: 20%; font-size: 150px; border-radius: 2rem solid black;" ></ion-icon>
+
+  </ion-item>
+  <br>
+  <ion-item lines="full">
+    <ion-title style="margin-left: 1.5rem;">User Details</ion-title>
+  </ion-item>
+  <br>
+  <br>
+
+  <ion-item lines="none">
+   <ion-icon name="person" color="primary" style="margin-left: .2rem;"></ion-icon>
+  </ion-item>
+  <br>
+ <ion-item lines="none">
+  <ion-icon name="mail"color="primary" ></ion-icon> <ion-label style="margin-left: .2rem;">LuckyMbokazi@gmail.com</ion-label>
+ </ion-item>
+ <ion-button (click)="getUserByEmail()">like</ion-button>
+
+

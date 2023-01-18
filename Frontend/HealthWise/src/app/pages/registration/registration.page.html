@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title class="text-center"><strong>Health Wise</strong></ion-title>
+  
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <h5>Register</h5>
+  <form>
+    <ion-item class="inputs">
+      <ion-label  ><ion-icon name="mail"></ion-icon></ion-label>
+      <ion-input  position="floating" [(ngModel)]="user.email_address" name="first_name"  placeholder="Please enter email adress"type="email" required autocomplete="off" ></ion-input>
+    </ion-item>
+
+
+    <ion-item class="inputs">
+      <ion-label ><ion-icon name="person"></ion-icon></ion-label>
+      <ion-input [(ngModel)]="user.first_name"  placeholder="Please enter name"name="first_name" type="text" required autocomplete="off"></ion-input>
+    </ion-item>
+
+
+    <ion-item class="inputs">
+      <ion-label  ><ion-icon name="people"></ion-icon></ion-label>
+      <ion-input [(ngModel)]="user.last_name"  placeholder="Please enter last name" name="last_name" type="text" required autocomplete="off" ></ion-input>
+    </ion-item>
+
+    <ion-item class="inputs">
+      <ion-label ><ion-icon name="lock-closed"></ion-icon></ion-label>
+      <ion-input [(ngModel)]="user.password" name="password" type="password"  placeholder="Please enter password"required autocomplete="off"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit"  expand="block" (click)="saveUser()">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+
+<ion-item>
+  <h6 style="color: black;"> Already Registered? <a href="login"> Login here.</a></h6>
+</ion-item>
+

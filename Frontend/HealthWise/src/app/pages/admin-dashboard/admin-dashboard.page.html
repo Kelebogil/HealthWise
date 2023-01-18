@@ -1,0 +1,107 @@
+<!-- <ion-header>
+    <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button>
+      </ion-menu-button>
+      <ion-title>HealthWise</ion-title>
+      <ion-button expand="block" style="margin-left: 70%;" color="danger"><ion-icon position-static style="float: inline-start;" name="power"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-router-outlet id="content1" main></ion-router-outlet>
+
+</ion-header> -->
+
+
+<!-- <ion-content>
+  <div style="margin-left: 15%;">
+    Welcome to HealthWise
+  </div>
+
+  <ion-content>
+    <form syle="">
+      <ion-item class="search" lines="none" size="full">
+        <ion-icon  class="icons" name="search-outline"></ion-icon >
+        <ion-input [(ngModel)]="search" name="first_name"  placeholder="Search Patient"type="search" required></ion-input>
+      </ion-item>
+      <br>
+      <br>
+    </form>
+  </ion-content>
+</ion-content> -->
+
+<!-- <ion-content>
+  <h5 style="text-align: center;">Available Booking Dates</h5>
+  <br><br>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        Date
+      </ion-col>
+      <ion-col style="margin-left: 10%;">
+        Time
+      </ion-col>
+      <ion-col>
+        Action
+      </ion-col>
+    </ion-row> -->
+
+    <!-- Table Data -->
+    <!-- <ion-row class="space" *ngFor="let avail of availableBooking; index as i" [class.active]="i == currentIndex" (click)="setActive(avail,i)">
+
+      <ion-col class="spaces">  {{ avail.booking_date}}</ion-col>
+      <ion-col class="spaces" style="margin-left: 5%;" > {{ avail.booking_time }} </ion-col>
+      <ion-col>
+        <ion-button position="stached" class="btn"> Book </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content> -->
+
+<!-- <br><br>
+<ion-content *ngFor="let avail of availableBooking; index as i" [class.active]="i == currentIndex" (click)="setActive(avail,i)">
+  <ion-row> Date: {{ avail.booking_date }} </ion-row>
+  <ion-row> Time: {{ avail.booking_time }} </ion-row>
+  <ion-row> <ion-button class="btn btn-success"> Book </ion-button> </ion-row>
+</ion-content> -->
+
+
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Available
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-items *ngFor="let avail of availableBooking; index as i" [class.active]="i == currentIndex" (click)="setActive(avail,i)">
+      Date: {{ avail.booking_time }}
+    </ion-items>
+  </ion-list>
+</ion-content> -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      HealthWise
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <h4 style="text-align: center;"> Available Booking Dates </h4>
+    <ion-item *ngFor="let avail of availableBooking">
+      <ion-thumbnail slot="end">
+      </ion-thumbnail>
+        <ion-label>
+          <p>Date : {{avail.avl_date}}</p>
+          <p>Time : {{avail.avl_time}}</p>
+          <ion-button color="primary" routerLink="/bookings"> Book Now </ion-button>
+        </ion-label>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

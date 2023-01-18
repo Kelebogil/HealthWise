@@ -1,0 +1,55 @@
+.icons{
+    size: 1rem;
+    
+}
+*{
+    --background: rgb(218,225,222);
+}
+
+ion-toolbar{
+    text-align: center;
+    color: rgb(5,82,144);
+}
+h5{
+    text-align: center;
+    color: black;
+    margin: 40px;
+}
+
+.inputs{
+
+
+    margin-top: 15px;
+}
+ion-icon{
+
+    color: rgb(5, 82,144);
+    font-size: 25px;
+}
+ion-input{
+    color: rgb(67,75,50);
+    --background:white;
+}
+ion-button{
+    --background: rgb(5,82,144);
+    color:rgb(218,225,222);
+    margin-top: 15px;
+
+  }
+  .inputs{
+    --background:white;
+    margin-right: 10px;
+    margin-left: 10px;
+  
+ 
+  }
+
+  ion-button{
+    --background: rgb(5,82,144);
+ 
+    margin-top: 15px;
+  }
+  a{
+   color: rgb(5,82,144);
+
+  }

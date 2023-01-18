@@ -1,0 +1,51 @@
+<ion-header>
+
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title position="stached" class="text-center"><strong>Health Wise</strong></ion-title>
+  
+  </ion-toolbar>
+  
+</ion-header>
+
+
+<ion-content >
+  
+     <h5>Login</h5>
+    <form (ngsubmit)="loginUser()" >
+  
+      <ion-item class="inputs">
+        <ion-label ><ion-icon name="mail"></ion-icon></ion-label>
+        <ion-input [(ngModel)]="user.email_address" placeholder="Enter your email" type="email" name="email" required></ion-input>
+      </ion-item>
+    
+    
+      <ion-item class="inputs">
+        <ion-label><ion-icon name="lock-closed"></ion-icon></ion-label>
+
+          <ion-input [(ngModel)]="user.password" name="password" [type]="showPwd ? 'text' : 'password'"  placeholder="Enter password" required autocomplete="off" ></ion-input>
+
+          <ion-icon
+            slot="end"
+              [name]="pwdIcon"
+                 (click)="togglePwd()"
+                  size="small"
+           ></ion-icon>
+       </ion-item>
+
+  
+  
+    <ion-button (click)="loginUser()" shape="block">Login</ion-button>
+ 
+ 
+    <a  href="forgot-password" style="font-size: 14px;"  >Forgot password?</a>
+    <a class="a1" href="registration" style="font-size: 14px; margin-left: 1.5rem;">Register</a>
+  
+  </form>
+ 
+
+
+  </ion-content>

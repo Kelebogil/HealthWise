@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="admin-profile"></ion-back-button>
+    </ion-buttons>
+    <ion-title>User Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+ <ion-content *ngIf="this.user">
+  <h2>{{this.user.first_name}}: Details </h2>
+  <ion-item>
+  <ion-label>Full names: </ion-label>
+  <ion-input>{{this.user.first_name}} </ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Last Name: </ion-label>
+  <ion-input>{{this.user.last_name}}</ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Email: </ion-label>
+  <ion-input>{{this.user.email_address}}</ion-input>
+</ion-item>
+  <ion-item>
+    <ion-label>Phone Number: </ion-label>
+    <ion-input>{{this.user.client_phone_no}}</ion-input>
+  </ion-item>
+<br>
+  <ion-button color="warning" href="updating">Update</ion-button>
+
+  <ion-button color="danger" (click)="deleteUsers()">Delete</ion-button>
+</ion-content>
